@@ -1,6 +1,6 @@
 {
-  "name": "BlankUniverse",
-  "short_name": "BlankUniverse",
+  "name": "BlankParticle",
+  "short_name": "BlankParticle",
   "icons": [
     {
       "src": "/img/android-chrome-192x192.png",
@@ -14,7 +14,7 @@
     }
   ],
   "start_url": "/",
-  "theme_color": "#ffffff",
+  "theme_color": "#ffb956",
   "background_color": "#ffffff",
   "display": "standalone"
 }
