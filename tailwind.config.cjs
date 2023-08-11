@@ -22,9 +22,9 @@ const config = {
   theme: {
     extend: {
       fontFamily: {
-        heading: ["SpaceGrotesk", ...defaultTheme.fontFamily.sans],
+        heading: ["Space Grotesk", ...defaultTheme.fontFamily.sans],
         body: ["Satoshi", ...defaultTheme.fontFamily.sans],
-        mono: ["JetBrainsMono", ...defaultTheme.fontFamily.mono],
+        mono: ["JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
         brand: "#ffb956",

@@ -7,7 +7,13 @@
 <nav class="mx-auto md:py-10 py-6 sm:px-10 px-4 flex font-body items-center">
   <div class="flex-1">
     <a href="/" title="Go to home">
-      <img src={TitleLogo} alt="BlankParticle's Text Logo" class="w-56 select-none my-2" />
+      <img
+        src={TitleLogo}
+        alt="BlankParticle's Text Logo"
+        class="w-56 select-none my-2"
+        width="224px"
+        height="28px"
+      />
     </a>
   </div>
   <div class="font-semibold">
@@ -22,10 +28,22 @@
   </div>
   <div class="flex ml-6 sm:ml-0">
     <a href="/github">
-      <img class="w-7 block mx-2" src={GithubLogo} alt="BlankParticle's Github" />
+      <img
+        class="w-7 block mx-2"
+        src={GithubLogo}
+        alt="BlankParticle's Github"
+        width="28px"
+        height="28px"
+      />
     </a>
     <a href="/linkedin">
-      <img class="w-7 block mx-2" src={LinkedInLogo} alt="BlankParticle's LinkedIn" />
+      <img
+        class="w-7 block mx-2"
+        src={LinkedInLogo}
+        alt="BlankParticle's LinkedIn"
+        width="28px"
+        height="28px"
+      />
     </a>
   </div>
 </nav>

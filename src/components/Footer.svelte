@@ -6,22 +6,52 @@
   import DiscordLogo from "@assets/img/DiscordLogo.svg";
 </script>
 
-<footer class="my-14 flex justify-center items-center flex-col font-medium text-gray-400 gap-2">
+<footer class="my-11 flex justify-center items-center flex-col font-medium text-gray-400 gap-4">
   <div class="flex flex-wrap my-2">
     <a href="/github">
-      <img class="w-5 block mx-4" src={GithubLogo} alt="BlankParticle's Github" />
+      <img
+        class="w-6 block mx-4"
+        src={GithubLogo}
+        alt="BlankParticle's Github"
+        width="24px"
+        height="24px"
+      />
     </a>
     <a href="/linkedin">
-      <img class="w-5 block mx-4" src={LinkedInLogo} alt="BlankParticle's LinkedIn" />
+      <img
+        class="w-6 block mx-4"
+        src={LinkedInLogo}
+        alt="BlankParticle's LinkedIn"
+        width="24px"
+        height="24px"
+      />
     </a>
     <a href="/twitter">
-      <img class="w-5 block mx-4" src={TwitterLogo} alt="BlankParticle's Twitter" />
+      <img
+        class="w-6 block mx-4"
+        src={TwitterLogo}
+        alt="BlankParticle's Twitter"
+        width="24px"
+        height="24px"
+      />
     </a>
     <a href="/spotify">
-      <img class="w-5 block mx-4" src={SpotifyLogo} alt="BlankParticle's Spotify" />
+      <img
+        class="w-6 block mx-4"
+        src={SpotifyLogo}
+        alt="BlankParticle's Spotify"
+        width="24px"
+        height="24px"
+      />
     </a>
     <a href="/discord">
-      <img class="w-5 block mx-4" src={DiscordLogo} alt="BlankParticle's Discord" />
+      <img
+        class="w-6 block mx-4"
+        src={DiscordLogo}
+        alt="BlankParticle's Discord"
+        width="24px"
+        height="24px"
+      />
     </a>
   </div>
   <div>
