@@ -2,6 +2,7 @@
   import type { PageData } from "./$types";
   import Quote from "@components/Quote.svelte";
   import BlankParticleLogo from "@components/BlankParticleLogo.svelte";
+  import Spotify from "@components/Spotify.svelte";
   export let data: PageData;
 </script>
 
@@ -48,6 +49,9 @@
         <a href="/blog" class="text-brand underline font-semibold">My Blog</a>.
       </li>
     </ul>
+  </div>
+  <div class="flex w-[90%] max-w-3xl mx-auto">
+    <Spotify />
   </div>
   <Quote from={data.anime} author={data.author} quote={data.quote} />
 </main>

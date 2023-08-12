@@ -4,7 +4,7 @@
   export let from: string;
 </script>
 
-<div class="md:w-3/4 w-[90%] md:px-12 md:py-10 my-4 py-4 px-5 rounded-2xl">
+<div class="md:w-3/4 w-[90%] md:px-12 md:py-10 mb-4 py-4 px-5 rounded-2xl">
   <div class="w-fit mb-10 mx-auto">
     <div class="text-3xl text-brand select-none text-left leading-tight h-3">“</div>
     <p class="text-lg text-gray-100 text-center px-5">
