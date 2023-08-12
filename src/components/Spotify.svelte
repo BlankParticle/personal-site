@@ -38,7 +38,13 @@
   <div class="w-full max-w-xs rounded-2xl p-2 mt-4 mx-auto">
     {#if $spotify.isPlaying}
       <div class="flex">
-        <img src={SpotifyOriginalLogo} alt="Spotify Logo" class="w-6 mx-2 select-none" />
+        <img
+          src={SpotifyOriginalLogo}
+          alt="Spotify Logo"
+          class="w-6 mx-2 select-none"
+          width="24px"
+          height="24px"
+        />
         <span class="font-bold select-none">Now Playing</span>
       </div>
       <div class="flex my-2 px-2 border border-gray-700 rounded-2xl">
@@ -46,25 +52,27 @@
           src={$spotify.image}
           alt="Album Art"
           class="w-16 h-16 mr-4 my-2 rounded-xl"
-          width="64px"
-          height="64px"
+          width="640px"
+          height="640px"
         />
-        <div class="flex flex-col py-2 flex-1 justify-center">
-          <a class="font-semibold block" href={$spotify.url}>
-            {$spotify.title.substring(0, 18)}
-            <span class="text-gray-500">{$spotify.title.length >= 19 ? "..." : ""}</span>
+        <div class="flex flex-col py-2 flex-1 justify-center overflow-hidden">
+          <a class="font-semibold block truncate" href={$spotify.url}>
+            {$spotify.title}
           </a>
-          <span class="text-sm block">
-            {$spotify.artist.substring(0, 22)}
-            <span class="text-gray-500 font-medium">
-              {$spotify.artist.length >= 23 ? "..." : ""}
-            </span>
+          <span class="text-sm block truncate">
+            {$spotify.artist}
           </span>
         </div>
       </div>
     {:else}
       <div class="flex justify-center">
-        <img src={SpotifyOriginalLogo} alt="Spotify Logo" class="w-6 mx-2 select-none" />
+        <img
+          src={SpotifyOriginalLogo}
+          alt="Spotify Logo"
+          class="w-6 mx-2 select-none"
+          width="64px"
+          height="64px"
+        />
         <span class="font-bold select-none">Not Playing Spotify</span>
       </div>
     {/if}

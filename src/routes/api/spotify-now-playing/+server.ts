@@ -69,6 +69,9 @@ const getAccessToken: SpotifyGetTokenFn = async () => {
 };
 
 const getNowPlaying: SpotifyNowPlayingFn = async (token: string) => {
+  if (env.LAST_SPOTIFY_RESPONSE && Number(env.LAST_SPOTIFY_RESPONSE_TIME) + 10000 > Date.now()) {
+    return JSON.parse(env.LAST_SPOTIFY_RESPONSE);
+  }
   try {
     const song_res = await fetch("https://api.spotify.com/v1/me/player/currently-playing", {
       headers: {
@@ -84,9 +87,14 @@ const getNowPlaying: SpotifyNowPlayingFn = async (token: string) => {
     const title = song.item.name;
     const url = song.item.external_urls.spotify;
     const isPlaying = song.is_playing;
-    return isPlaying
+    const data = isPlaying
       ? { image, artist, title, url, isPlaying, error: false }
       : { error: false, isPlaying: false, artist: "", title: "", image: "", url: "" };
+    if (data.isPlaying) {
+      env.LAST_SPOTIFY_RESPONSE = JSON.stringify(data);
+      env.LAST_SPOTIFY_RESPONSE_TIME = Date.now().toString();
+    }
+    return data;
   } catch (error) {
     console.log(error);
     notifyOnDiscord(DISCORD_WEBHOOK_URL, `Error getting Spotify now playing: ${error}`);
