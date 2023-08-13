@@ -2,7 +2,7 @@
   import Neofetch from "@assets/img/Neofetch.png";
 </script>
 
-<main class="mx-auto w-full max-w-4xl flex flex-col px-4 text-lg">
+<main class="mx-auto w-full max-w-4xl flex flex-col px-4 md:text-lg">
   <h1 class="text-4xl font-heading font-bold my-2">My Setup</h1>
   <p>My Setup is pretty simple, I try not to complicate too much</p>
   <h2 class="mt-8 mb-2 text-3xl font-heading font-bold">My Fonts and Theme</h2>

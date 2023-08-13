@@ -5,6 +5,7 @@ export const load = (({ params }) => {
   const linkMap: Record<string, string> = {
     email: "mailto:hello@blankparticle.in",
     github: "https://github.com/BlankParticle",
+    blog: "https://blog.blankparticle.in",
     linkedin: "https://www.linkedin.com/in/blankparticle",
     discord: "https://discord.com/users/1096392763144159252",
     spotify: "https://open.spotify.com/user/31krf3flzpa44udfgkc5a5xrqn7y",

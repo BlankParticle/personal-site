@@ -1,4 +1,4 @@
-<main class="mx-auto w-full max-w-4xl flex flex-col px-4 text-lg">
+<main class="mx-auto w-full max-w-4xl flex flex-col px-4 md:text-lg">
   <h1 class="text-4xl font-heading font-bold my-2">About Me</h1>
   <p>
     Hello, I am <span class="font-medium">Rahul Mishra</span>, I go by the name
