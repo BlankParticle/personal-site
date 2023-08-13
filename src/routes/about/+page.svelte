@@ -12,7 +12,7 @@
   <br />
   <p>
     I taught myself <span class="font-medium text-brand">Web Development</span> as I had nothing to
-    do during COVID-19 pandemic. My Web Development journey started with PHP while I tried to create
+    do during COVID-19 pandemic. It started with PHP while I tried to create
     <a href="https://www.pocketmine.net/" class="text-brand underline font-medium">PocketMine</a>
     Plugins for Minecraft (I Know its wired but believe me lol), through that I was exposed to Web Development
     and did a few things with PHP and MySQL on my phone (Yes, I did it on my phone, thanks to
@@ -43,7 +43,7 @@
     I am still exploring most of new and shiny Tech and I am not sure what I will be working on in
     future, but I am sure that I will be working on something cool.
   </p>
-  <h2 class="my-2 text-3xl font-heading font-bold">FAQs</h2>
+  <h2 class="mt-8 mb-2 text-3xl font-heading font-bold">FAQs</h2>
   <ul class="list-disc px-4">
     <li class="my-2">
       <span class="block font-semibold">Why BlankParticle?</span>
@@ -53,7 +53,17 @@
     </li>
     <li class="my-2">
       <span class="block font-semibold">What do I do beside Programming?</span>
-      <span> I love to watch anime, also I am a huge fan of Linux and Open Source.</span>
+      <span>
+        I love to watch <a href="/myanimelist" class="text-brand underline font-semibold">anime</a>,
+        also I am a huge fan of Linux and Open Source.</span
+      >
+    </li>
+    <li class="my-2">
+      <span class="block font-semibold">What Apps do I use, my OS, my fonts/theme?</span>
+      <span>
+        All of my setup information is given
+        <a href="/setup" class="text-brand underline font-semibold">here</a>.
+      </span>
     </li>
   </ul>
 </main>

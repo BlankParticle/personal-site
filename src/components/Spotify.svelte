@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+  import { onDestroy, onMount } from "svelte";
   import { writable } from "svelte/store";
   import SpotifyOriginalLogo from "@assets/img/SpotifyOriginal.svg";
 
@@ -23,15 +23,18 @@
     url: "",
   });
 
+  let timeout: number | undefined;
+
   const fetchNowPlaying = async () => {
     const data = await (await fetch("/api/spotify-now-playing")).json();
     spotify.set(data);
     if (!data.error) {
-      setTimeout(fetchNowPlaying, 15000);
+      timeout = setTimeout(fetchNowPlaying, 15000);
     }
   };
 
   onMount(() => fetchNowPlaying());
+  onDestroy(() => timeout && clearTimeout(timeout));
 </script>
 
 {#if !$spotify.error}

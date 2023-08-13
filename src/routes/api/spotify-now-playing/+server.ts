@@ -81,7 +81,18 @@ const getNowPlaying: SpotifyNowPlayingFn = async (token: string) => {
     if (song_res.status === 204) {
       return { error: false, isPlaying: false, artist: "", title: "", image: "", url: "" };
     }
-    const song = (await song_res.json()) as SpotifyNowPlayingResponse;
+    let song = (await song_res.json()) as SpotifyNowPlayingResponse;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if ((song as any).error) {
+      song = JSON.parse(
+        env.LAST_SPOTIFY_RESPONSE ||
+          `{ error: false, isPlaying: false, artist: "", title: "", image: "", url: "" }`,
+      );
+      env.SPOTIFY_ACCESS_TOKEN = "";
+      env.SPOTIFY_ACCESS_TOKEN_EXPIRY = Date.now().toString();
+    }
+
     const image = song.item.album.images[0].url;
     const artist = song.item.artists.map((a) => a.name).join(", ");
     const title = song.item.name;
